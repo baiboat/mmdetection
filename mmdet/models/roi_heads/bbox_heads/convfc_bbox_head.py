@@ -281,8 +281,7 @@ class ConvFCBBoxHead(BBoxHead):
 
     def forward(self, x, p):
         p2,p3,p4,p5, _ = p
-        from tools.feature_visualization import draw_feature_map
-        draw_feature_map(p)
+   
         p2 = self.gpa(p2)
         p3 = self.gpa(p3)
         p4 = self.gpa(p4)
